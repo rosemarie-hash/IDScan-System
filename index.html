@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IDScan | Student Portal</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #071d49, #1976d2);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .login-box {
+      background: white;
+      padding: 35px 25px;
+      width: 100%;
+      max-width: 400px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .logo {
+      font-size: 55px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      color: #09265e;
+      margin-bottom: 5px;
+    }
+
+    p {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 13px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    button {
+      width: 100%;
+      padding: 13px;
+      background: #123b85;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0b2659;
+    }
+
+    .footer {
+      margin-top: 25px;
+      font-size: 12px;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="login-box">
+
+    <div class="logo">🎓</div>
+
+    <h1>IDScan</h1>
+
+    <p>
+      Student Portal & QR Code
+      Attendance Monitoring System
+    </p>
+
+    <form id="loginForm">
+
+      <select id="role" required>
+        <option value="">Select User Role</option>
+        <option value="admin">Administrator</option>
+        <option value="teacher">Teacher</option>
+        <option value="student">Student</option>
+      </select>
+
+      <input
+        type="text"
+        id="studentId"
+        placeholder="Student ID / Username"
+        required
+      >
+
+      <input
+        type="password"
+        id="password"
+        placeholder="Enter Password"
+        required
+      >
+
+      <button type="submit">Login</button>
+
+    </form>
+
+    <p id="message" role="status"></p>
+
+    <div class="footer">
+      © 2026 IDScan System
+      <br>
+      Capstone Project
+    </div>
+
+  </div>
+
+  <script>
+    document.getElementById("loginForm")
+      .addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        document.getElementById("message")
+          .textContent =
+          "Login design is ready. Authentication will be added next.";
+      });
+  </script>
+
+</body>
+  </html>
